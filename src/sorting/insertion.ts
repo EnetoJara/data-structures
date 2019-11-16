@@ -10,7 +10,7 @@
  * @param {number[]} arrayOfNumbers unordered array
  * @returns {number[]} `array` of sortered numbers
  */
-export function insertionSort(arr: number[]): number[] {
+export function insertionSort (arr: number[]): number[] {
     const l = arr.length;
     let j: number;
     let temp: number;

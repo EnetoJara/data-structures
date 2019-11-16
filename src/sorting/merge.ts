@@ -14,7 +14,7 @@
  * @requires mergeArrays
  * @returns {number[]} `array` of ordered numbers
  */
-export function mergeSort(arr: number[]): number[] | undefined {
+export function mergeSort (arr: number[]): number[] | undefined {
     if (arr.length < 2) {
         return;
     }
@@ -49,7 +49,7 @@ export function mergeSort(arr: number[]): number[] | undefined {
  * @param startRight start position of the right array.
  * @param stopRight stop position of the right array.
  */
-function mergeArrays(arr: number[], startLeft: number, stopLeft: number, startRight: number, stopRight: number): void {
+function mergeArrays (arr: number[], startLeft: number, stopLeft: number, startRight: number, stopRight: number): void {
     const rightArr = new Array(stopRight - startRight + 1);
     const leftArr = new Array(stopLeft - startLeft + 1);
 

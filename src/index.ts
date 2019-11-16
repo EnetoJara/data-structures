@@ -1,7 +1,7 @@
 import { List } from "./list/list";
 import { Stack } from "./stack/stack";
 
-function isPalindrome (param: string) {
+function isPalindrome(param: string) {
     const s = new Stack();
     for (let i = 0; i < param.length; ++i) {
         s.push(param[i]);

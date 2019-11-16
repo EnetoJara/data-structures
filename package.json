@@ -5,8 +5,8 @@
   "main": "src/index.ts",
   "types": "types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./dist && npm run pretty && npm run lint && tsc",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts  --timeout 500000",
+    "build": "rm -rf ./dist && npm run lint && tsc",
     "pretty": "prettier src/*.ts src/**/*.ts --write",
     "lint": "tslint -p . --fix",
     "start": "npm run build && node ./dist/list/list.js"
@@ -14,7 +14,11 @@
   "author": "Ernesto Jara Olveda",
   "license": "MIT",
   "devDependencies": {
+    "@types/mocha": "5.2.7",
+    "chai": "4.2.0",
+    "mocha": "6.2.2",
     "prettier": "1.19.1",
+    "ts-node": "8.5.2",
     "tslib": "1.10.0",
     "tslint": "5.20.1",
     "tslint-config-prettier": "1.18.0",

@@ -17,7 +17,7 @@ export class List {
      * @param {number} pos Current position in list.
      * @param {number} listSize Number of elements in list.
      */
-    public constructor (private dataStore: string[] = [], private pos: number = 0, private listSize: number = 0) {
+    public constructor(private dataStore: string[] = [], private pos: number = 0, private listSize: number = 0) {
         this.append = this.append.bind(this);
         this.find = this.find.bind(this);
         this.remove = this.remove.bind(this);
@@ -43,9 +43,9 @@ export class List {
      * @memberof List
      * @access public
      * @param {string} element new item to be added to the list
-     * @returns void
+     * @returns {void} `void`
      */
-    public append (element: string) {
+    public append(element: string) {
         this.dataStore[this.listSize++] = element;
     }
 
@@ -58,7 +58,7 @@ export class List {
      * @return {number} the position where the element was found.
      * @return {number} If the element wasn’t found, returns `-1`
      */
-    public find (element: string): number {
+    public find(element: string): number {
         const { length } = this.dataStore;
         for (let i = 0; i < length; ++i) {
             if (this.dataStore[i] === element) {
@@ -76,9 +76,9 @@ export class List {
      * @memberof List
      * @access public
      * @param {string} element to be remove
-     * @returns `boolean` **true** if the item was removed
+     * @returns {boolean} `boolean` **true** if the item was removed
      */
-    public remove (element: string): boolean {
+    public remove(element: string): boolean {
         const foundAt = this.find(element);
 
         if (foundAt === -1) {
@@ -94,9 +94,9 @@ export class List {
     /**
      * @memberof List
      * @access public
-     * @returns `number` of elements in the list
+     * @returns {number} `number` of elements in the list
      */
-    public length (): number {
+    public length(): number {
         return this.listSize;
     }
 
@@ -105,9 +105,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `string[]` full list
+     * @returns {string[]} `string[]` full list
      */
-    public toString (): string[] {
+    public toString(): string[] {
         return this.dataStore;
     }
 
@@ -121,9 +121,9 @@ export class List {
      * @access public
      * @param {string} element to insert
      * @param {string} after an specific element
-     * @returns `boolean` **true** if it was added
+     * @returns {boolean} `boolean` **true** if it was added
      */
-    public insert (element: string, after: string): boolean {
+    public insert(element: string, after: string): boolean {
         const insertPos = this.find(after);
 
         if (insertPos === -1) {
@@ -141,9 +141,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `void`
+     * @returns {void} `void`
      */
-    public clean (): void {
+    public clean(): void {
         delete this.dataStore;
         this.dataStore = [];
         this.pos = 0;
@@ -155,9 +155,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `true` if the list contains the element
+     * @returns {boolean} `true` if the list contains the element
      */
-    public contains (element: string): boolean {
+    public contains(element: string): boolean {
         const { length } = this.dataStore;
         for (let i = 0; length; ++i) {
             if (this.dataStore[i] === element) {
@@ -173,9 +173,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `void`
+     * @returns {void} `void`
      */
-    public first () {
+    public first() {
         this.pos = 0;
     }
 
@@ -184,9 +184,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `void`
+     * @returns {void} `void`
      */
-    public end () {
+    public end() {
         this.pos = this.listSize - 1;
     }
 
@@ -195,9 +195,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `void`
+     * @returns {void} `void`
      */
-    public prev () {
+    public prev() {
         if (this.pos > 0) {
             --this.pos;
         }
@@ -208,9 +208,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `void`
+     * @returns {void} `void`
      */
-    public next () {
+    public next() {
         if (this.pos < this.listSize - 1) {
             ++this.pos;
         }
@@ -221,9 +221,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `index` of the current element
+     * @returns {number} `index` of the current element
      */
-    public currentPosition (): number {
+    public currentPosition(): number {
         return this.pos;
     }
 
@@ -235,7 +235,7 @@ export class List {
      * @access public
      * @returns `void`
      */
-    public moveTo (position: number) {
+    public moveTo(position: number) {
         this.pos = position;
     }
 
@@ -244,9 +244,9 @@ export class List {
      *
      * @memberof List
      * @access public
-     * @returns `string`
+     * @returns {string} `string`
      */
-    public getElement () {
+    public getElement(): string {
         return this.dataStore[this.pos];
     }
 }

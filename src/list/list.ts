@@ -18,21 +18,21 @@ export class List {
      * @param {number} listSize Number of elements in list.
      */
     public constructor (private dataStore: string[] = [], private pos: number = 0, private listSize: number = 0) {
-         this.append = this.append.bind(this);
-         this.find = this.find.bind(this);
-         this.remove = this.remove.bind(this);
-         this.length = this.length.bind(this);
-         this.toString = this.toString.bind(this);
-         this.insert = this.insert.bind(this);
-         this.clean = this.clean.bind(this);
-         this.contains = this.contains.bind(this);
-         this.first = this.first.bind(this);
-         this.end = this.end.bind(this);
-         this.prev = this.prev.bind(this);
-         this.next = this.next.bind(this);
-         this.currentPosition = this.currentPosition.bind(this);
-         this.moveTo = this.moveTo.bind(this);
-         this.getElement = this.getElement.bind(this);
+        this.append = this.append.bind(this);
+        this.find = this.find.bind(this);
+        this.remove = this.remove.bind(this);
+        this.length = this.length.bind(this);
+        this.toString = this.toString.bind(this);
+        this.insert = this.insert.bind(this);
+        this.clean = this.clean.bind(this);
+        this.contains = this.contains.bind(this);
+        this.first = this.first.bind(this);
+        this.end = this.end.bind(this);
+        this.prev = this.prev.bind(this);
+        this.next = this.next.bind(this);
+        this.currentPosition = this.currentPosition.bind(this);
+        this.moveTo = this.moveTo.bind(this);
+        this.getElement = this.getElement.bind(this);
     }
 
     /**
@@ -46,7 +46,7 @@ export class List {
      * @returns void
      */
     public append (element: string) {
-        this.dataStore[this.listSize++] = element
+        this.dataStore[this.listSize++] = element;
     }
 
     /**
@@ -59,14 +59,14 @@ export class List {
      * @return {number} If the element wasn’t found, returns `-1`
      */
     public find (element: string): number {
-        const { length } = this.dataStore
+        const { length } = this.dataStore;
         for (let i = 0; i < length; ++i) {
             if (this.dataStore[i] === element) {
-                return i
+                return i;
             }
         }
 
-        return -1
+        return -1;
     }
 
     /**
@@ -79,16 +79,16 @@ export class List {
      * @returns `boolean` **true** if the item was removed
      */
     public remove (element: string): boolean {
-        const foundAt = this.find(element)
+        const foundAt = this.find(element);
 
         if (foundAt === -1) {
-            return false
+            return false;
         }
 
-        this.dataStore.splice(foundAt, 1)
-        --this.listSize
+        this.dataStore.splice(foundAt, 1);
+        --this.listSize;
 
-        return true
+        return true;
     }
 
     /**
@@ -97,7 +97,7 @@ export class List {
      * @returns `number` of elements in the list
      */
     public length (): number {
-        return this.listSize
+        return this.listSize;
     }
 
     /**
@@ -108,7 +108,7 @@ export class List {
      * @returns `string[]` full list
      */
     public toString (): string[] {
-        return this.dataStore
+        return this.dataStore;
     }
 
     /**
@@ -124,16 +124,16 @@ export class List {
      * @returns `boolean` **true** if it was added
      */
     public insert (element: string, after: string): boolean {
-        const insertPos = this.find(after)
+        const insertPos = this.find(after);
 
         if (insertPos === -1) {
-            return false
+            return false;
         }
 
-        this.dataStore.splice(insertPos + 1, 0, element)
-        ++this.listSize
+        this.dataStore.splice(insertPos + 1, 0, element);
+        ++this.listSize;
 
-        return true
+        return true;
     }
 
     /**
@@ -144,10 +144,10 @@ export class List {
      * @returns `void`
      */
     public clean (): void {
-        delete this.dataStore
-        this.dataStore = []
-        this.pos = 0
-        this.listSize = this.pos
+        delete this.dataStore;
+        this.dataStore = [];
+        this.pos = 0;
+        this.listSize = this.pos;
     }
 
     /**
@@ -158,14 +158,14 @@ export class List {
      * @returns `true` if the list contains the element
      */
     public contains (element: string): boolean {
-        const { length } = this.dataStore
+        const { length } = this.dataStore;
         for (let i = 0; length; ++i) {
             if (this.dataStore[i] === element) {
-                return true
+                return true;
             }
         }
 
-        return false
+        return false;
     }
 
     /**
@@ -176,7 +176,7 @@ export class List {
      * @returns `void`
      */
     public first () {
-        this.pos = 0
+        this.pos = 0;
     }
 
     /**
@@ -187,7 +187,7 @@ export class List {
      * @returns `void`
      */
     public end () {
-        this.pos = this.listSize - 1
+        this.pos = this.listSize - 1;
     }
 
     /**
@@ -199,7 +199,7 @@ export class List {
      */
     public prev () {
         if (this.pos > 0) {
-            --this.pos
+            --this.pos;
         }
     }
 
@@ -212,7 +212,7 @@ export class List {
      */
     public next () {
         if (this.pos < this.listSize - 1) {
-            ++this.pos
+            ++this.pos;
         }
     }
 
@@ -224,7 +224,7 @@ export class List {
      * @returns `index` of the current element
      */
     public currentPosition (): number {
-        return this.pos
+        return this.pos;
     }
 
     /**
@@ -236,7 +236,7 @@ export class List {
      * @returns `void`
      */
     public moveTo (position: number) {
-        this.pos = position
+        this.pos = position;
     }
 
     /**
@@ -247,14 +247,14 @@ export class List {
      * @returns `string`
      */
     public getElement () {
-        return this.dataStore[this.pos]
+        return this.dataStore[this.pos];
     }
 }
 
-const names: List = new List()
-names.append("Cynthia")
-names.append("Raymond")
-names.append("Barbara")
-console.log(names.toString())
-names.remove("Raymond")
-console.log(names.toString())
+const names: List = new List();
+names.append("Cynthia");
+names.append("Raymond");
+names.append("Barbara");
+console.log(names.toString());
+names.remove("Raymond");
+console.log(names.toString());

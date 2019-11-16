@@ -6,8 +6,8 @@
   "types": "types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ./dist && npm run pretty && tsc",
-    "pretty": "prettier src/*.ts --write",
+    "build": "rm -rf ./dist && npm run pretty && npm run lint && tsc",
+    "pretty": "prettier src/*.ts src/**/*.ts --write",
     "lint": "tslint -p . --fix",
     "start": "npm run build && node ./dist/list/list.js"
   },

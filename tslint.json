@@ -15,11 +15,11 @@
         "import-spacing":true,
         "arrow-return-shorthand":true,
         "member-access": true,
+        "prefer-for-of":false,
         "indent": [true, "spaces", 4],
         "no-consecutive-blank-lines": true,
         "prefer-object-spread":true,
-        "no-use-before-declare":true,
-        "semicolon":false
+        "semicolon":true
        },
     "rulesDirectory": [
     ]

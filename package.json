@@ -1,0 +1,25 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && npm run pretty && tsc",
+    "pretty": "prettier src/*.ts --write",
+    "lint": "tslint -p . --fix",
+    "start": "npm run build && node ./dist/list/list.js"
+  },
+  "author": "Ernesto Jara Olveda",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "1.19.1",
+    "tslib": "1.10.0",
+    "tslint": "5.20.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-consistent-codestyle": "1.16.0",
+    "tslint-plugin-prettier": "2.0.1",
+    "typescript": "3.7.2"
+  }
+}

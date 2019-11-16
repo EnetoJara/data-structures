@@ -1,0 +1,26 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:latest",
+        "tslint-config-prettier",
+        "tslint-consistent-codestyle"
+    ],
+    "jsRules": {},
+    "rules": {
+        "const-parameters": 2,
+        "no-console":false,
+        "space-before-function-paren":true,
+        "class-name": true,
+        "prefer-const":true,
+        "import-spacing":true,
+        "arrow-return-shorthand":true,
+        "member-access": true,
+        "indent": [true, "spaces", 4],
+        "no-consecutive-blank-lines": true,
+        "prefer-object-spread":true,
+        "no-use-before-declare":true,
+        "semicolon":false
+       },
+    "rulesDirectory": [
+    ]
+}

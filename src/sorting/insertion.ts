@@ -7,7 +7,7 @@
  *
  * @function insertionSort
  * @export
- * @param {number[]} arrayOfNumbers unordered array
+ * @param {number[]} arr unordered array
  * @returns {number[]} `array` of sortered numbers
  */
 export function insertionSort (arr: number[]): number[] {

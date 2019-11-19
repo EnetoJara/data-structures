@@ -7,8 +7,8 @@
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*.spec.ts  --timeout 500000",
     "build": "rm -rf ./dist && npm run lint && tsc",
-    "pretty": "prettier src/*.ts src/**/*.ts --write",
-    "lint": "tslint -p . --fix",
+    "pretty": "prettier src/*.ts src/**/*.ts test/**/*.spec.ts --write",
+    "lint": "tslint -p . src/*.ts src/**/*.ts test/**/*.spec.ts --fix",
     "start": "npm run build && node ./dist/list/list.js"
   },
   "author": "Ernesto Jara Olveda",

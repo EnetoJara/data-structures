@@ -10,7 +10,7 @@
  * @export
  * @param {number[]} arr unordered array of numbers
  */
-export function selectionSort (arr: number[]): number[] {
+export function selectionSort(arr: number[]): number[] {
     const { length } = arr;
     let aux: number;
 

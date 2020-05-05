@@ -4,7 +4,7 @@
  * @param n amount of numbers
  * @returns {number[]} `array` of random numbers
  */
-export function randomNumbers (n: number): number[] {
+export function randomNumbers(n: number): number[] {
     return Array(n)
         .fill(0)
         .map(() => Math.floor(Math.random() * n));

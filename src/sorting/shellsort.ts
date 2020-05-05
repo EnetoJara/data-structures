@@ -22,7 +22,7 @@
  * @param {number[]} arr unsorted array
  * @returns {number[]} sorted array
  */
-export function shellSort (arr: number[]): number[] {
+export function shellSort(arr: number[]): number[] {
     const gaps = [5, 3, 1];
 
     let aux: number;

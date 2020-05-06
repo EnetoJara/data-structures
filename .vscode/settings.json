@@ -108,7 +108,7 @@
     "autoimport.doubleQuotes": true,
     "editor.suggest.showColors": true,
     "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "monospace",
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },

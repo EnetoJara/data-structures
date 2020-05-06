@@ -17,7 +17,7 @@ export class Stack {
      * @param {string[]} dataStore The array that stores the stack elements.
      * @param {number} top Keeps track of the head of the stack.
      */
-    public constructor(private dataStore: string[] = [], private top: number = 0) {
+    public constructor (private dataStore: string[] = [], private top: number = 0) {
         this.push = this.push.bind(this);
         this.pop = this.pop.bind(this);
         this.peek = this.peek.bind(this);
@@ -33,7 +33,7 @@ export class Stack {
      * @param element new item to be added at the stack
      * @returns {void} `void`
      */
-    public push(element: string) {
+    public push (element: string) {
         this.dataStore[this.top++] = element;
     }
 
@@ -44,7 +44,7 @@ export class Stack {
      * @method pop
      * @returns {string} The elemenet that has just been removed.
      */
-    public pop(): string {
+    public pop (): string {
         return this.dataStore[--this.top];
     }
 
@@ -57,7 +57,7 @@ export class Stack {
      * @method peek
      * @returns {string} `string` The top element.
      */
-    public peek() {
+    public peek () {
         return this.dataStore[this.top - 1];
     }
 
@@ -67,7 +67,7 @@ export class Stack {
      * @method length
      * @returns {number} `number` of elements in the list
      */
-    public length() {
+    public length () {
         return this.top;
     }
 
@@ -79,7 +79,7 @@ export class Stack {
      * @method clean
      * @returns {void} `void`
      */
-    public clean() {
+    public clean () {
         this.dataStore = [];
         this.top = 0;
     }

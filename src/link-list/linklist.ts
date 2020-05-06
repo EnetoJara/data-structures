@@ -1,7 +1,7 @@
-import { Comparator } from '../utils/comparator';
+import { Comparator } from "../utils/comparator";
 import { LinkedListNode } from "./linked-list-node";
 
-export type Obj = {
+export interface IObj {
     value: any;
     callback?: CallableFunction;
 }
@@ -125,7 +125,7 @@ export class LinkedList<T> {
      * @param {function} [findParams.callback]
      * @return {LinkedListNode}
      */
-    public find (obj: Obj) {
+    public find (obj: IObj) {
         const { value, callback } = obj;
         if (!this.head) {
             return null;

@@ -25,7 +25,7 @@ export function hammingDistance (str1: string, str2: string):  number {
     const bLength = str2.length;
 
     if (aLength !== bLength) {
-        throw new Error("Strings must be same length")
+        throw new Error("Strings must be same length");
     }
 
     for (let i = 0; i < aLength; i++) {

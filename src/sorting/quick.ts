@@ -15,7 +15,7 @@
  * @param {number[]} arr `array` of unordered numbers.
  * @returns {number[]} `array` of ordered numbers.
  */
-export function quickSort(arr: number[]): number[] {
+export function quickSort (arr: number[]): number[] {
     const { length } = arr;
 
     if (length === 0) {

@@ -13,7 +13,7 @@
  * @param {number[]} arr array of numbers unordered
  * @returns {number[]} `array` of numbers ordered
  */
-export function bubbleSort(arr: number[]): number[] {
+export function bubbleSort (arr: number[]): number[] {
     const { length } = arr;
 
     for (let i = 0; i < length; ++i) {
